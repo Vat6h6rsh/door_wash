@@ -1,39 +1,54 @@
 import React from "react";
+import Image from "next/image";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer2 = () => {
+  const socialLinks = [
+    { platform: "Facebook", icon: <FaFacebookF />, url: "#" },
+    { platform: "Instagram", icon: <FaInstagram />, url: "#" },
+    { platform: "Twitter", icon: <FaTwitter />, url: "#" },
+  ];
+
+  const quickLinks = ["Features", "Pricing", "How it Works", "FAQs"];
+  const supportLinks = [
+    "Contact Us",
+    "Privacy Policy",
+    "Terms of Service",
+    "Refund Policy",
+  ];
+  const policies = ["Privacy Policy", "Terms of Service", "Cookie Policy"];
+
   return (
-    <footer id="footer" className="bg-zinc-900 border-t border-neutral-800">
+    <footer className="bg-zinc-900 border-t border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer */}
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
-            <div>
-              <h3 className="text-2xl font-bold text-slate-950 mb-2">
-                DoorWash
-              </h3>
-              <p className="text-cyan-400">
-                Premium laundry service at your doorstep
-              </p>
+            <div className="flex items-center space-x-4">
+              <Image
+                src="/doorwash_combined_logo.svg"
+                alt="DoorWash Logo"
+                width={200}
+                height={50}
+              />
             </div>
             <div className="flex space-x-4">
-              {/* Social Media Icons */}
-              {["Facebook", "Instagram", "Twitter"].map((platform) => (
+              {socialLinks.map(({ platform, icon, url }) => (
                 <a
                   key={platform}
-                  href="#"
+                  href={url}
                   className="text-cyan-700 hover:text-lime-500 transition-colors duration-300"
                   aria-label={platform}
                 >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    {/* Add respective SVG paths for each platform */}
-                  </svg>
+                  {icon}
                 </a>
               ))}
+            </div>
+            <div>
+              <p className="text-cyan-400">
+                Premium laundry service at your doorstep
+              </p>
             </div>
           </div>
 
@@ -43,7 +58,7 @@ const Footer2 = () => {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {["Features", "Pricing", "How it Works", "FAQs"].map((link) => (
+              {quickLinks.map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(" ", "_")}`}
@@ -60,12 +75,7 @@ const Footer2 = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
             <ul className="space-y-3">
-              {[
-                "Contact Us",
-                "Privacy Policy",
-                "Terms of Service",
-                "Refund Policy",
-              ].map((item) => (
+              {supportLinks.map((item) => (
                 <li key={item}>
                   <a
                     href="#"
@@ -79,39 +89,21 @@ const Footer2 = () => {
           </div>
 
           {/* Download App */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
-              Get the App
-            </h3>
-            <div className="space-y-4">
-              {["App Store", "Google Play"].map((store) => (
-                <a
-                  key={store}
-                  href="#"
-                  className="block p-4 rounded-lg bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 transition-colors duration-300"
-                >
-                  <div className="flex items-center gap-3">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      {/* Add respective SVG paths */}
-                    </svg>
-                    <div className="text-left">
-                      <div className="text-xs text-neutral-400">
-                        {store === "App Store"
-                          ? "Download on the"
-                          : "GET IT ON"}
-                      </div>
-                      <div className="text-sm font-semibold text-white">
-                        {store}
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
+          <div className="flex flex-col gap-6">
+            <Image
+              src="/GooglePlay.png"
+              width={150}
+              height={40}
+              alt="Download on Google Play"
+              className="hover:scale-105 transition-transform"
+            />
+            <Image
+              src="/AppStore.png"
+              width={150}
+              height={40}
+              alt="Download on App Store"
+              className="hover:scale-105 transition-transform"
+            />
           </div>
         </div>
 
@@ -122,17 +114,15 @@ const Footer2 = () => {
               © 2024 DoorWash. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
-              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
-                (policy) => (
-                  <a
-                    key={policy}
-                    href="#"
-                    className="text-sm text-neutral-400 hover:text-white transition-colors duration-300"
-                  >
-                    {policy}
-                  </a>
-                )
-              )}
+              {policies.map((policy) => (
+                <a
+                  key={policy}
+                  href="#"
+                  className="text-sm text-neutral-400 hover:text-white transition-colors duration-300"
+                >
+                  {policy}
+                </a>
+              ))}
             </div>
           </div>
         </div>

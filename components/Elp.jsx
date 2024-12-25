@@ -4,6 +4,8 @@ import {
   CheckBadgeIcon,
   DocumentCurrencyRupeeIcon,
 } from "@heroicons/react/24/outline";
+import { AuroraBackground } from "./ui/aurora-background";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -38,13 +40,13 @@ const Feature = ({ title, description, icon, bgColor }) => (
         {icon}
       </div>
       <h3 className="text-2xl font-semibold mb-3 text-sky-950">{title}</h3>
-      <p className="text-zinc-800">{description}</p>
+      <p className="text-zinc-950">{description}</p>
     </div>
   </div>
 );
 
 const PromotionBanner = () => (
-  <div className="mt-16 p-8 rounded-2xl bg-white/90 shadow-md">
+  <div className="mt-16 p-8 bg-white/90 rounded-2xl shadow-lg bg-opacity-90 backdrop-blur-sm hover:shadow-2xl transition-all duration-300">
     <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
       <div>
         <h3 className="text-3xl font-bold text-gray-900 mb-2">
@@ -66,20 +68,33 @@ const PromotionBanner = () => (
 );
 
 const Elp = () => (
+  // <AuroraBackground>
+  //   <motion.div
+  //     initial={{ opacity: 0.0, y: 40 }}
+  //     whileInView={{ opacity: 1, y: 0 }}
+  //     transition={{
+  //       delay: 0.3,
+  //       duration: 0.8,
+  //       ease: "easeInOut",
+  //     }}
+  //     className="relative flex flex-col gap-4 items-center justify-center px-4"
+  //   >
   <section
     id="features"
     className="relative py-24 bg-cover bg-center bg-fixed"
-    style={{
-      backgroundImage: `url('/peter-aschoff-j7BDBE0QjUE-unsplash.jpg')`,
-    }}
+    style={
+      {
+        // backgroundImage: `url('/peter-aschoff-j7BDBE0QjUE-unsplash.jpg')`,
+      }
+    }
   >
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="text-white text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-blue-950 text-3xl md:text-4xl font-bold mb-4">
           Why Choose DoorWash?
         </h2>
-        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+        <p className="text-zinc-950 text-lg max-w-2xl mx-auto">
           Experience premium laundry service that's both affordable and
           convenient.
         </p>
@@ -102,6 +117,8 @@ const Elp = () => (
       <PromotionBanner />
     </div>
   </section>
+  //   </motion.div>
+  // </AuroraBackground>
 );
 
 export default Elp;

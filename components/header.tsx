@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { IconHome2, IconUserCircle, IconWallet } from "@tabler/icons-react";
-import { FloatingNav } from "./ui/floating-navbar";
+import { Bars3BottomLeftIcon } from "@heroicons/react/24/outline";
 
 const GradientHover: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
     { name: "Features", link: "#", icon: <IconHome2 className="icon-style" /> },
     {
       name: "How it works",
-      link: "#",
+      link: "HowitWorks",
       icon: <IconUserCircle className="icon-style" />,
     },
     { name: "Pricing", link: "#", icon: <IconWallet className="icon-style" /> },
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="relative bg-emerald-50 shadow-md">
+    <header className="relative bg-gradient-to-br from-white via-blue-50 to-purple-50 shadow-md">
       <div className="container mx-auto flex items-center justify-between py-2 px-3">
         {/* Logo */}
         <div className="flex items-center">
@@ -54,19 +54,12 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button className="md:hidden focus:outline-none" onClick={toggleMenu}>
-          <svg
-            className="w-6 h-6 text-slate-950"
+          <Bars3BottomLeftIcon
+            className="w-6 h-6 text-pink-600"
             fill="none"
             stroke="currentColor"
             strokeWidth={2}
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+          />
         </button>
       </div>
 
@@ -86,9 +79,6 @@ const Header: React.FC = () => {
           </ul>
         </div>
       )}
-
-      {/* Floating Navbar */}
-      <FloatingNav navItems={navItems} />
     </header>
   );
 };

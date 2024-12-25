@@ -1,6 +1,7 @@
 "use client";
 
 import { CheckBadgeIcon } from "@heroicons/react/20/solid";
+import { StarIcon } from "@heroicons/react/20/solid"; // New icon for Popular
 import React from "react";
 
 const pricingData = [
@@ -20,6 +21,7 @@ const pricingData = [
       "Free Pickup & Delivery",
     ],
     buttonLabel: "Select Plan",
+    isPopular: true, // Adding "Popular" flag
   },
   {
     title: "Dry Clean",
@@ -39,26 +41,37 @@ const PriceCards = () => {
     <section
       className="relative bg-cover bg-center bg-fixed min-h-[600px] md:min-h-[700px] lg:min-h-[800px]"
       style={{
-        backgroundImage: `url('/currency.jpg')`,
+        backgroundImage: ``,
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-30"></div>
+      <div className="absolute inset-0 bg-white opacity-30"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center px-6 py-12 text-center text-white">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-shadow-lg">
+        <h1 className="text-3xl text-black md:text-4xl font-bold mb-4 text-shadow-lg">
           Simple, Transparent Pricing
         </h1>
-        <h3 className="text-lg md:text-xl font-light mb-8">
+        <h3 className="text-lg text-black md:text-xl font-light mb-8">
           Affordable rates for all your laundry needs with no hidden charges
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 ">
           {pricingData.map((plan, index) => (
             <div
               key={index}
-              className="bg-white bg-opacity-80 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105"
+              className={`${
+                plan.isPopular
+                  ? "bg-gradient-to-br from-blue-500/20 to-purple-500/20 border-2 border-blue-500"
+                  : "bg-gradient-to-br from-white  to-sky-100"
+              } bg-opacity-80 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105`}
             >
-              <div className="p-6 flex flex-col justify-between h-full">
+              <div className="p-20 flex flex-col justify-between h-full">
+                {/* Popular Tag */}
+                {plan.isPopular && (
+                  <div className="absolute top-2 right-2 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    Popular
+                  </div>
+                )}
+
                 {/* Title */}
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                   {plan.title}

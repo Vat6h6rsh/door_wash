@@ -86,7 +86,7 @@ export default function SmoothParallaxScroll() {
 
 const Column = ({ images, y }) => {
   return (
-    <motion.div className={styles.column} style={{ y }}>
+    // <motion.div className={styles.column} style={{ y }}>
       {images.map((src, i) => (
         <div key={i} className={styles.imageContainer}>
           <Image
@@ -97,6 +97,6 @@ const Column = ({ images, y }) => {
           />
         </div>
       ))}
-    </motion.div>
+    // </motion.div>
   );
 };

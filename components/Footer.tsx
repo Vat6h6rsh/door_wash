@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Footer: React.FC = () => {
+const Footer1: React.FC = () => {
   return (
     <>
       <footer className="footer bg-zinc-200 text-cyan-700 p-10">
@@ -77,4 +77,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default Footer1;

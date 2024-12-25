@@ -1,4 +1,5 @@
 "use client";
+
 import {
   ChevronDoubleDownIcon,
   ChevronDoubleRightIcon,
@@ -37,18 +38,18 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
   <div className="mb-4">
     <button
       onClick={onClick}
-      className="flex justify-between items-center w-full p-6 rounded-lg bg-neutral-800/50 border border-neutral-700 text-left hover:border-blue-500/50 transition-colors duration-300"
+      className="flex justify-between items-center w-full p-6 rounded-lg bg-pastel-blue border border-blue-300 text-left hover:border-green-400 transition-colors duration-300"
     >
-      <span className="text-lg font-medium text-cyan-400">{question}</span>
+      <span className="text-lg font-medium text-pastel-green">{question}</span>
       <ChevronDoubleDownIcon
-        className={`w-5 h-5 text-green-400 transition-transform ${
+        className={`w-5 h-5 text-pastel-green transition-transform ${
           isOpen ? "rotate-180" : ""
         }`}
       />
     </button>
     {isOpen && (
-      <div className="p-6 bg-neutral-800/30 border border-t-0 border-neutral-700 rounded-b-lg">
-        <p className="text-neutral-300">{answer}</p>
+      <div className="p-6 bg-pastel-blue-light border border-t-0 border-blue-300 rounded-b-lg">
+        <p className="text-zinc-900">{answer}</p>
       </div>
     )}
   </div>
@@ -58,14 +59,22 @@ const Faq = () => {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section id="faq" className="py-24 bg-emerald-50">
+    <section
+      id="faq"
+      className="py-24"
+      style={
+        {
+          //background: "linear-gradient(to bottom, #f0faff, #e8f8f5)",
+        }
+      }
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-pastel-green mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-green-400 text-lg max-w-2xl mx-auto">
+          <p className="text-pastel-blue text-lg max-w-2xl mx-auto">
             Everything you need to know about DoorWash laundry services
           </p>
         </div>
@@ -85,10 +94,10 @@ const Faq = () => {
 
         {/* Support CTA */}
         <div className="mt-16 text-center">
-          <p className="text-green-400 mb-4">Still have questions?</p>
+          <p className="text-pastel-blue mb-4">Still have questions?</p>
           <a
             href="#contact"
-            className="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-neutral-900 hover:bg-blue-700 transition-colors duration-300"
+            className="inline-flex items-center px-6 py-3 rounded-lg bg-pastel-green text-neutral-900 bg-green-400 transition-colors duration-300"
           >
             Contact Support
             <ChevronDoubleRightIcon className="w-5 h-5 ml-2" />
