@@ -1,13 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { FaTimes, FaGift, FaClipboard } from "react-icons/fa"; // Import FaClipboard
+import { FaTimes, FaGift, FaClipboard } from "react-icons/fa";
 
-const Announcement = ({ onClose }) => {
+interface AnnouncementProps {
+  onClose: () => void; // Define the type for onClose prop
+}
+
+const Announcement: React.FC<AnnouncementProps> = ({ onClose }) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopyCode = () => {
-    // Copy the code to clipboard
     navigator.clipboard.writeText("SANTA10").then(() => {
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000); // Reset the copied state after 2 seconds
@@ -37,7 +40,7 @@ const Announcement = ({ onClose }) => {
       <div className="relative flex items-center space-x-2">
         <button
           onClick={handleCopyCode}
-          className="flex items-center space-x-1 bg-gray-200 px-2 py-1 rounded text-gray-800 hover:bg-gray-300 transition-all"
+          className="flex items-center space-x-1 bg-gray-100 px-2 py-1 rounded text-gray-800 hover:bg-gray-300 transition-all"
           aria-label="Copy discount code"
         >
           <FaClipboard size={16} />
