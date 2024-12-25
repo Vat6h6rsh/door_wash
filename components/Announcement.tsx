@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaTimes, FaGift } from "react-icons/fa";
+import { FaTimes, FaGift, FaClipboard } from "react-icons/fa"; // Import FaClipboard
 
 const Announcement = ({ onClose }) => {
   const [isCopied, setIsCopied] = useState(false);
@@ -13,6 +13,7 @@ const Announcement = ({ onClose }) => {
       setTimeout(() => setIsCopied(false), 2000); // Reset the copied state after 2 seconds
     });
   };
+
   return (
     <div
       id="sticky_banner"
@@ -30,6 +31,24 @@ const Announcement = ({ onClose }) => {
             </span>
           </strong>
         </span>
+      </div>
+
+      {/* Copy Button */}
+      <div className="relative flex items-center space-x-2">
+        <button
+          onClick={handleCopyCode}
+          className="flex items-center space-x-1 bg-gray-200 px-2 py-1 rounded text-gray-800 hover:bg-gray-300 transition-all"
+          aria-label="Copy discount code"
+        >
+          <FaClipboard size={16} />
+        </button>
+
+        {/* Copied Message */}
+        {isCopied && (
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 mt-1 text-sm text-green-600 bg-white border border-green-500 rounded px-2 py-1">
+            Copied!
+          </div>
+        )}
       </div>
 
       {/* Close Button */}

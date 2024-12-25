@@ -1,5 +1,4 @@
 "use client";
-import Header from "@/components/Header";
 import PriceCards from "@/components/Pricecards";
 import Faq from "@/components/Faq";
 import HowItWorks from "@/components/HowItWorks";
@@ -9,13 +8,8 @@ import Announcement from "@/components/Announcement";
 import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
 import WappHeader from "@/components/WappHeader";
-import { useEffect, useState } from "react";
-import Lenis from "lenis";
-import SmoothParallaxScroll from "@/components/SmoothParallaxScroll";
-import Footer1 from "@/components/Footer";
-import Footer from "@/components/Footer3";
+import { useState } from "react";
 import Footer2 from "@/components/Foottoo";
-import { DotBackgroundDemo } from "@/components/DotBackgroundDemo";
 
 export default function Home() {
   const [isAnnouncementVisible, setAnnouncementVisible] = useState(true);

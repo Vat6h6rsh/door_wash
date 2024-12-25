@@ -2,8 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { AuroraBackground } from "./ui/aurora-background";
 
 export function HeroAurora() {
   return (
