@@ -5,6 +5,7 @@ const nextConfig = {
       "images.unsplash.com", // Add any other image domains you are using
       "assets.aceternity.com",
       "https://lottie.host/",
+      "avatar.iran.liara.run",
     ],
   },
 };

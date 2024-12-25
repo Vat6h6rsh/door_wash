@@ -20,6 +20,14 @@ const testimonials = [
     feedback:
       "Absolutely love the service! The attention to detail and care for my clothes are unparalleled.",
   },
+  {
+    name: "Sarah Thompson",
+    role: "Regular Customer",
+    avatarUrl: "https://avatar.iran.liara.run/public",
+    rating: 5,
+    feedback:
+      "Express delivery is amazing! My clothes come back perfectly clean and fresh every time. The app makes scheduling super easy.",
+  },
   // Add more testimonials as needed
 ];
 
