@@ -33,8 +33,8 @@ export function HeroAurora() {
 
         {/* Subheading aligned to the center */}
         <div className="text-center text-xl sm:text-lg md:text-xl text-Blue-900 py-4 max-w-2xl gap-8 mx-auto">
-          Professional laundry service that's cheaper than your local laundry
-          with express delivery.
+          Professional laundry service that&apos;s cheaper than your local
+          laundry with express delivery.
         </div>
 
         {/* Phone number input field */}

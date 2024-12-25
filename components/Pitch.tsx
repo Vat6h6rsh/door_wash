@@ -51,7 +51,7 @@ export default function Pitch() {
           Why Choose DoorWash?
         </h2>
         <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 mt-4">
-          Experience premium laundry service that's both affordable and
+          Experience premium laundry service that&apos;s both affordable and
           convenient.
         </p>
       </div>

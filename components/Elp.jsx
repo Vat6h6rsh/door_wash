@@ -4,8 +4,6 @@ import {
   CheckBadgeIcon,
   DocumentCurrencyRupeeIcon,
 } from "@heroicons/react/24/outline";
-import { AuroraBackground } from "./ui/aurora-background";
-import { motion } from "framer-motion";
 
 const features = [
   {
@@ -95,7 +93,7 @@ const Elp = () => (
           Why Choose DoorWash?
         </h2>
         <p className="text-zinc-950 text-lg max-w-2xl mx-auto">
-          Experience premium laundry service that's both affordable and
+          Experience premium laundry service that&apos;s both affordable and
           convenient.
         </p>
       </div>

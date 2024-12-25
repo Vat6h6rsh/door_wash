@@ -6,8 +6,6 @@ import {
   CalendarIcon,
   PhoneIcon,
 } from "@heroicons/react/24/outline";
-import { AuroraBackground } from "./ui/aurora-background";
-import { motion } from "framer-motion";
 
 const steps = [
   {

@@ -1,7 +1,6 @@
 "use client";
 
 import { CheckBadgeIcon } from "@heroicons/react/20/solid";
-import { StarIcon } from "@heroicons/react/20/solid"; // New icon for Popular
 import React from "react";
 
 const pricingData = [

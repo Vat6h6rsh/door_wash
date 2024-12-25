@@ -49,7 +49,7 @@ const Nav = () => {
         <p className="hover:text-cyan-400 transition-colors">Features</p>
         <p className="hover:text-cyan-400 transition-colors">Pricing</p>
         <p className="hover:text-cyan-400 transition-colors">How It Works</p>
-        <p className="hover:text-cyan-400 transition-colors">FAQ's</p>
+        <p className="hover:text-cyan-400 transition-colors">FAQ</p>
       </div>
       <div className="flex flex-col gap-6">
         <Image

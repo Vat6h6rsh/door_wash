@@ -86,17 +86,18 @@ export default function SmoothParallaxScroll() {
 
 const Column = ({ images, y }) => {
   return (
-    // <motion.div className={styles.column} style={{ y }}>
+    <motion.div className={styles.column} style={{ y }}>
       {images.map((src, i) => (
         <div key={i} className={styles.imageContainer}>
           <Image
             src={src}
-            alt="DoorWash"
+            alt={`DoorWash image ${i + 1}`} // Improved alt text for better accessibility
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={i === 0} // Prioritize the first image for better LCP
           />
         </div>
       ))}
-    // </motion.div>
+    </motion.div>
   );
 };

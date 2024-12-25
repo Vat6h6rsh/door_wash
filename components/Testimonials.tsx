@@ -1,4 +1,5 @@
 import { StarIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import React from "react";
 
 // Testimonial data
@@ -10,14 +11,6 @@ const testimonials = [
     rating: 5,
     feedback:
       "Express delivery is amazing! My clothes come back perfectly clean and fresh every time. The app makes scheduling super easy.",
-  },
-  {
-    name: "Michael Chen",
-    role: "New Customer",
-    avatarUrl: "https://avatar.iran.liara.run/public",
-    rating: 5,
-    feedback:
-      "Absolutely love the service! The attention to detail and care for my clothes are unparalleled.",
   },
   {
     name: "Michael Chen",
@@ -42,23 +35,29 @@ const TestimonialCard: React.FC<{
     <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white via-emerald-100 to-sky-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     <div className="relative">
       <div className="flex items-center mb-6">
-        <img
+        <Image
           src={avatarUrl}
           alt={name}
           className="w-12 h-12 rounded-full transition-opacity duration-300 opacity-100"
+          width={48}
+          height={48}
           loading="lazy"
         />
         <div className="ml-4">
-          <h4 className="text-Black font-semibold">{name}</h4>
+          <h4 className="text-black font-semibold">{name}</h4>
           <p className="text-neutral-700 text-sm">{role}</p>
         </div>
       </div>
       <div className="flex mb-4">
-        {Array.from({ length: rating }, (_, index) => (
-          <StarIcon className="w-5 h-5 text-yellow-500" fill="currentColor" />
+        {Array.from({ length: rating }).map((_, index) => (
+          <StarIcon
+            key={index} // Unique key for each star
+            className="w-5 h-5 text-yellow-500"
+            fill="currentColor"
+          />
         ))}
       </div>
-      <p className="text-emrald-500">{`"${feedback}"`}</p>
+      <p className="text-emerald-500">{`"${feedback}"`}</p>
     </div>
   </div>
 );
@@ -71,7 +70,7 @@ const Testimonials: React.FC = () => {
       className="py-24"
       style={
         {
-          //background: "linear-gradient(to bottom, white, #9eeaf7, #bbf0d6)",
+          // background: "linear-gradient(to bottom, white, #9eeaf7, #bbf0d6)",
         }
       }
     >
