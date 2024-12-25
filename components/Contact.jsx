@@ -1,6 +1,5 @@
 import { EnvelopeOpenIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import React, { FC } from "react";
 
 // Reusable Section Header
 const SectionHeader = ({ title, subtitle }) => (
