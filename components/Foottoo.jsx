@@ -9,7 +9,15 @@ const Footer2 = () => {
     { platform: "Twitter", icon: <FaTwitter />, url: "#" },
   ];
 
-  const quickLinks = ["Features", "Pricing", "How it Works", "FAQs"];
+  const quickLinks = [
+    { label: "Features", href: "#elp" },
+    {
+      label: "How it works",
+      href: "#how-it-works",
+    },
+    { label: "Pricing", href: "#price-cards" },
+    { label: "Contact", href: "#contact" },
+  ];
   const supportLinks = [
     "Contact Us",
     "Privacy Policy",
@@ -59,12 +67,12 @@ const Footer2 = () => {
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
-                <li key={link}>
+                <li key={link.label}>
                   <a
-                    href={`#${link.toLowerCase().replace(" ", "_")}`}
+                    href={link.href}
                     className="text-neutral-400 hover:text-white transition-colors duration-300"
                   >
-                    {link}
+                    {link.label} {/* Display the label, not the whole object */}
                   </a>
                 </li>
               ))}

@@ -13,7 +13,11 @@ const WappHeader = ({ isAnnouncementVisible }) => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const menuItems = [
-    { icon: <GiClothesline />, label: "Features", href: "#elp" },
+    {
+      icon: <GiClothesline className="" />,
+      label: "Why ?",
+      href: "#elp",
+    },
     {
       icon: <GiWashingMachine />,
       label: "How it works",
@@ -25,7 +29,7 @@ const WappHeader = ({ isAnnouncementVisible }) => {
 
   return (
     <header
-      className={`sticky top-0 z-40 flex items-center justify-between bg-emerald-50 bg-opacity-80 p-4 text-black shadow-lg ${
+      className={`sticky top-0 z-40 flex items-center justify-between bg-emerald-50 bg-opacity-95 p-4 text-black shadow-lg ${
         isAnnouncementVisible ? "mt-0" : ""
       }`}
     >
@@ -53,18 +57,18 @@ const WappHeader = ({ isAnnouncementVisible }) => {
       {/* Sidebar for Mobile */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-gray-700 bg-opacity-80 flex flex-col items-center mt-16 space-y-6 p-4 z-50"
+          className="fixed inset-0 bg-cyan-50 flex flex-col items-center justify-center p-4 z-50"
           onClick={toggleMenu} // Close the menu when clicking anywhere on the overlay
         >
-          <ul className="space-y-6 text-white text-xl">
+          <ul className="space-y-8 text-black text-2xl">
             {menuItems.map((item, index) => (
-              <li key={index} className="flex items-center space-x-2">
+              <li key={index}>
                 <a
                   href={item.href}
-                  className="flex items-center space-x-2 hover:text-cyan-200 hover:glow-cyan transition-all"
+                  className="flex flex-col items-center justify-center space-y-2 p-4 bg-emerald-50 hover:bg-amber-500 transition-all"
                 >
-                  {item.icon}
-                  <span>{item.label}</span>
+                  <div className="text-3xl ">{item.icon}</div>
+                  <span className="text-teal-700">{item.label}</span>
                 </a>
               </li>
             ))}

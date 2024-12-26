@@ -52,17 +52,6 @@ const Step = ({ title, description, icon, bgColor }) => (
 
 const HowItWorks = () => {
   return (
-    // <AuroraBackground>
-    //   <motion.div
-    //     initial={{ opacity: 0.0, y: 40 }}
-    //     whileInView={{ opacity: 1, y: 0 }}
-    //     transition={{
-    //       delay: 0.3,
-    //       duration: 0.8,
-    //       ease: "easeInOut",
-    //     }}
-    //     className="relative flex flex-col gap-4 items-center justify-center px-4"
-    //   >
     <section
       id="how_it_works"
       className="py-24 bg-cover bg-center bg-fixed"
@@ -111,8 +100,6 @@ const HowItWorks = () => {
         </div>
       </div>
     </section>
-    //   </motion.div>
-    // </AuroraBackground>
   );
 };
 

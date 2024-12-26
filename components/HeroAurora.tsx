@@ -1,22 +1,33 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 export function HeroAurora() {
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => {
+    setOffsetY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section
-      className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center py-24 sm:bg-fixed"
+      className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center py-24"
       style={{
         backgroundImage: `url("/tommaso-pecchioli-wQg7K-Aod50-unsplash.jpg")`,
         fontFamily: "'San Francisco', sans-serif",
       }}
     >
-      <div className="absolute inset-0 "></div>{" "}
+      <div className="absolute inset-0"></div>{" "}
       {/* Light overlay for contrast */}
       <div className="relative z-10 text-center space-y-8 px-4 sm:px-8 md:px-16">
         {/* Main heading */}
-        <div className="text-6xl sm:text-6xl md:text-7xl  font-bold text-neutral-950">
+        <div className="text-6xl sm:text-6xl md:text-7xl font-bold text-neutral-950">
           Laundry Service at Your Doorstep
         </div>
 
@@ -26,21 +37,20 @@ export function HeroAurora() {
           laundry with express delivery.
         </div>
 
-        {/* Phone number input field */}
-        <form className="flex gap-3 flex-col sm:flex-row">
+        <form className="flex gap-3 flex-col sm:flex-row items-center justify-center w-full">
           {/* Phone Number Input */}
-          <div className="flex-grow">
+          <div className="w-full sm:w-auto">
             <input
-              type="text"
+              type="tel" // Ensures numerical keyboard on mobile devices
               placeholder="Enter your Phone Number"
-              className="w-2/3 px-3 py-3 rounded-lg bg-white/20 text-cyans-800 placeholder-black focus:outline-double focus:ring-2 focus:ring-blue-500 backdrop-blur-sm pr-4"
+              className="w-full sm:w-80 lg:w-96 px-4 py-3 rounded-lg bg-white/20 text-cyan-800 placeholder-black focus:outline-none focus:ring-2 focus:ring-blue-500 backdrop-blur-sm"
             />
           </div>
 
           {/* Call to Action Button */}
           <button
             type="submit"
-            className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-emerald-500 transition-all duration-300"
+            className="w-full sm:w-auto px-4 py-3 sm:px-8 lg:px-10 sm:py-3 bg-blue-600 text-white rounded-lg hover:bg-emerald-500 transition-all duration-300"
           >
             Get DoorWash
           </button>
