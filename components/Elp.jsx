@@ -51,7 +51,7 @@ const PromotionBanner = () => (
           First Wash Free!
         </h3>
         <p className="text-gray-700">
-          Try our premium service today. Valid up to ₹200 on your first order.
+          Try our premium service today. Valid up to ₹115 on your first order.
         </p>
       </div>
       <a

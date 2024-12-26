@@ -106,7 +106,7 @@ const HowItWorks = () => {
             <ArrowRightIcon className="w-5 h-5 ml-2" />
           </a>
           <p className="mt-4 text-sm text-zinc-900">
-            *Terms apply. Valid up to ₹200 on your first order.
+            *Terms apply. Valid up to ₹115 on your first order.
           </p>
         </div>
       </div>

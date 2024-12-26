@@ -60,7 +60,7 @@ export function HeroAurora() {
         {/* App Store and Google Play images */}
         <div className="mt-8 flex justify-center gap-8 flex-wrap ">
           <a
-            href="https://www.apple.com/app-store/"
+            href="https://apps.apple.com/in/app/doorwash/id6737536776"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -73,7 +73,7 @@ export function HeroAurora() {
             />
           </a>
           <a
-            href="https://play.google.com/"
+            href="https://play.google.com/store/apps/details?id=com.doorwash.doorwashReachNativeApp&hl=en"
             target="_blank"
             rel="noopener noreferrer"
           >

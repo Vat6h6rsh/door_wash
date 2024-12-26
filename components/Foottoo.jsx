@@ -88,22 +88,34 @@ const Footer2 = () => {
             </ul>
           </div>
 
-          {/* Download App */}
-          <div className="flex flex-col gap-6">
-            <Image
-              src="/GooglePlay.png"
-              width={150}
-              height={40}
-              alt="Download on Google Play"
-              className="hover:scale-105 transition-transform"
-            />
-            <Image
-              src="/AppStore.png"
-              width={150}
-              height={40}
-              alt="Download on App Store"
-              className="hover:scale-105 transition-transform"
-            />
+          {/* App Store and Google Play images */}
+          <div className="mt-8 flex justify-center gap-8 flex-wrap ">
+            <a
+              href="https://apps.apple.com/in/app/doorwash/id6737536776"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/AppStore.png"
+                alt="App Store"
+                width={180}
+                height={50}
+                className="max-w-[150px] sm:max-w-[180px] hover:scale-105 transition-transform"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.doorwash.doorwashReachNativeApp&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/GooglePlay.png"
+                alt="Google Play"
+                width={200}
+                height={50}
+                className="max-w-[150px] sm:max-w-[180px] hover:scale-105 transition-transform"
+              />
+            </a>
           </div>
         </div>
 

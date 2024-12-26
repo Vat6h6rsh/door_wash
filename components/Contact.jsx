@@ -75,17 +75,34 @@ export const DownloadCard = () => (
     <h3 className="text-xl font-semibold text-emerald-500 mb-6">
       Download Our App
     </h3>
-    <div className="flex flex-col gap-6">
-      {["GooglePlay", "AppStore"].map((store) => (
+    {/* App Store and Google Play images */}
+    <div className="mt-8 flex justify-center gap-8 flex-wrap ">
+      <a
+        href="https://apps.apple.com/in/app/doorwash/id6737536776"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Image
-          key={store}
-          src={`/${store}.png`}
-          width={150}
-          height={40}
-          alt={`Download on ${store}`}
-          className="hover:scale-105 transition-transform"
+          src="/AppStore.png"
+          alt="App Store"
+          width={160}
+          height={50}
+          className="max-w-[150px] sm:max-w-[180px] hover:scale-105 transition-transform"
         />
-      ))}
+      </a>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.doorwash.doorwashReachNativeApp&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src="/GooglePlay.png"
+          alt="Google Play"
+          width={200}
+          height={50}
+          className="max-w-[150px] sm:max-w-[180px] hover:scale-105 transition-transform"
+        />
+      </a>
     </div>
   </div>
 );
