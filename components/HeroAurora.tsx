@@ -5,19 +5,8 @@ import Image from "next/image";
 
 export function HeroAurora() {
   return (
-    // <AuroraBackground>
-    //   <motion.div
-    //     initial={{ opacity: 0.0, y: 40 }}
-    //     whileInView={{ opacity: 1, y: 0 }}
-    //     transition={{
-    //       delay: 0.3,
-    //       duration: 0.8,
-    //       ease: "easeInOut",
-    //     }}
-    //     className="relative flex flex-col gap-4 items-center justify-center px-4"
-    //   >
     <section
-      className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center py-24 bg-fixed"
+      className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center py-24 sm:bg-fixed"
       style={{
         backgroundImage: `url("/tommaso-pecchioli-wQg7K-Aod50-unsplash.jpg")`,
         fontFamily: "'San Francisco', sans-serif",
@@ -88,8 +77,5 @@ export function HeroAurora() {
         </div>
       </div>
     </section>
-
-    //   </motion.div>
-    // </AuroraBackground>
   );
 }

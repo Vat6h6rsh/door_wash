@@ -1,15 +1,11 @@
 "use client";
 
-import {
-  FaBars,
-  FaTimes,
-  FaHome,
-  FaInfo,
-  FaShoppingCart,
-  FaUser,
-} from "react-icons/fa";
 import { useState } from "react";
 import Image from "next/image";
+import { GiClothesline, GiWashingMachine } from "react-icons/gi";
+import { MdAddIcCall, MdCurrencyRupee } from "react-icons/md";
+import { IoIosCloseCircleOutline } from "react-icons/io";
+import { FaBarsStaggered } from "react-icons/fa6";
 
 const WappHeader = ({ isAnnouncementVisible }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,10 +13,14 @@ const WappHeader = ({ isAnnouncementVisible }) => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const menuItems = [
-    { icon: <FaHome />, label: "Features", href: "#elp" },
-    { icon: <FaInfo />, label: "How it works", href: "#how-it-works" },
-    { icon: <FaShoppingCart />, label: "Pricing", href: "#price-cards" },
-    { icon: <FaUser />, label: "Contact", href: "#contact" },
+    { icon: <GiClothesline />, label: "Features", href: "#elp" },
+    {
+      icon: <GiWashingMachine />,
+      label: "How it works",
+      href: "#how-it-works",
+    },
+    { icon: <MdCurrencyRupee />, label: "Pricing", href: "#price-cards" },
+    { icon: <MdAddIcCall />, label: "Contact", href: "#contact" },
   ];
 
   return (
@@ -42,7 +42,11 @@ const WappHeader = ({ isAnnouncementVisible }) => {
       {/* Hamburger Icon for Mobile */}
       <div className="md:hidden">
         <button onClick={toggleMenu} aria-label="Toggle menu">
-          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          {isMenuOpen ? (
+            <IoIosCloseCircleOutline size={24} />
+          ) : (
+            <FaBarsStaggered size={24} />
+          )}
         </button>
       </div>
 

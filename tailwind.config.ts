@@ -111,7 +111,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("daisyui"), addVariablesForColors], // Added the color variables plugin
+  plugins: [require("tailwindcss-animate"), addVariablesForColors], // Added the color variables plugin
 };
 
 // Plugin to add color variables globally

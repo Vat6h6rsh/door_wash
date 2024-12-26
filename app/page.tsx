@@ -21,7 +21,7 @@ export default function Home() {
         <title>Door Wash - Premium Laundry Service</title>
         <meta
           name="description"
-          content="Get premium laundry service at your doorstep with Door Wash. Use the code LAUNDRY120 to get ₹120 off on your first order."
+          content="Get premium laundry service at your doorstep with Door Wash. Use the code LAUNDRY120 to get ₹115 off on your first order."
         />
         <meta
           name="keywords"

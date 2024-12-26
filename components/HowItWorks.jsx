@@ -4,15 +4,15 @@ import {
   CheckCircleIcon,
   TruckIcon,
   CalendarIcon,
-  PhoneIcon,
 } from "@heroicons/react/24/outline";
+import { GiCloudDownload } from "react-icons/gi";
 
 const steps = [
   {
     title: "Download App",
     description:
       "Get our app from App Store or Play Store, or share your number to receive the link.",
-    icon: <PhoneIcon className="w-8 h-8 text-sky-400" />,
+    icon: <GiCloudDownload className="w-8 h-8 text-sky-400" />,
     bgColor: "bg-blue-500/20",
   },
   {
