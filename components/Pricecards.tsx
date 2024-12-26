@@ -39,9 +39,11 @@ const PriceCards = () => {
   return (
     <section
       className="relative bg-cover bg-center bg-fixed min-h-[600px] md:min-h-[700px] lg:min-h-[800px]"
-      style={{
-        backgroundImage: ``,
-      }}
+      style={
+        {
+          //backgroundImage: `url("/tobias-van-schneider-EI-qM30boto-unsplash.jpg")`,
+        }
+      }
     >
       <div className="absolute inset-0 bg-white opacity-30"></div>
 
@@ -60,8 +62,8 @@ const PriceCards = () => {
               className={`${
                 plan.isPopular
                   ? "bg-gradient-to-br from-blue-500/20 to-purple-500/20 border-2 border-blue-500"
-                  : "bg-gradient-to-br from-white  to-sky-100"
-              } bg-opacity-80 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105`}
+                  : "bg-gradient-to-br from-amber-200/20 via-emerald-200/20  to-sky-200/20"
+              }  rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105`}
             >
               <div className="p-20 flex flex-col justify-between h-full">
                 {/* Popular Tag */}

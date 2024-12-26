@@ -63,7 +63,7 @@ const WappHeader = ({ isAnnouncementVisible }) => {
           {/* Close Icon */}
           <button
             onClick={toggleMenu}
-            className="absolute top-4 right-4 text-3xl text-amber-400 hover:text-red-500 transition-all"
+            className="absolute top-4 right-4 text-3xl text-amber-400 hover:text-red-800 transition-all"
             aria-label="Close menu"
           >
             <IoIosCloseCircleOutline />
@@ -91,7 +91,7 @@ const WappHeader = ({ isAnnouncementVisible }) => {
           <div key={index} className="flex items-center space-x-2">
             <a
               href={item.href}
-              className="flex items-center space-x-2 hover:text-cyan-200 hover:glow-cyan transition-all"
+              className="flex items-center space-x-2 hover:text-cyan-400 hover:glow-cyan transition-all"
             >
               {item.icon}
               <span>{item.label}</span>

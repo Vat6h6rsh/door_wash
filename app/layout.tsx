@@ -21,14 +21,21 @@ export const metadata: Metadata = {
   title: "Door Wash - Premium Laundry Service",
   description:
     "Experience premium laundry service at your doorstep. Clean, convenient, and affordable.",
-  keywords: ["laundry", "premium service", "Door Wash", "laundry pickup"],
+  keywords: [
+    "laundry",
+    "laundry in patna",
+    "best laundry service",
+    "premium service",
+    "Door Wash",
+    "laundry pickup",
+  ],
   authors: [{ name: "Door Wash Team" }],
   openGraph: {
     title: "Door Wash - Premium Laundry Service",
     description:
       "Experience premium laundry service at your doorstep. Clean, convenient, and affordable.",
     images: "/images/hero-image.jpg",
-    url: "https://yourwebsite.com",
+    url: "https://doorwash.com/",
   },
   twitter: {
     card: "summary_large_image",

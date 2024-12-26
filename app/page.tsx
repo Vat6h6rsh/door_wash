@@ -35,7 +35,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Get premium laundry service at your doorstep with Door Wash. Use the code LAUNDRY120 to get ₹120 off on your first order."
+          content="Get premium laundry service at your doorstep with Door Wash. Use the code LAUNDRY115 to get ₹115 off on your first order."
         />
         <meta property="og:image" content="/images/hero-image.jpg" />
         <meta property="og:url" content="https://yourwebsite.com" />
@@ -46,7 +46,7 @@ export default function Home() {
         />
         <meta
           name="twitter:description"
-          content="Get premium laundry service at your doorstep with Door Wash. Use the code LAUNDRY120 to get ₹120 off on your first order."
+          content="Get premium laundry service at your doorstep with Door Wash. Use the code LAUNDRY115 to get ₹115 off on your first order."
         />
         <meta name="twitter:image" content="/images/hero-image.jpg" />
       </Head>

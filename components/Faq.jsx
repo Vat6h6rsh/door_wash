@@ -10,7 +10,7 @@ const faqData = [
   {
     question: "How does the first free wash offer work?",
     answer:
-      "Your first wash is completely free up to ₹200. Simply download the app, schedule your first pickup, and the discount will be automatically applied to your order. Any amount exceeding ₹115 will be charged normally.",
+      "Your first wash is completely free up to ₹115. Simply download the app, schedule your first pickup, and the discount will be automatically applied to your order. Any amount exceeding ₹115 will be charged normally.",
   },
   {
     question: "What are your delivery timings?",
