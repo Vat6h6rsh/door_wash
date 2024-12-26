@@ -54,7 +54,7 @@ const Announcement: React.FC<AnnouncementProps> = ({ onClose }) => {
       {/* Disappearing Box for Copied Message */}
       {isCopied && (
         <div
-          className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-black border bg-opacity-100 border-lime-400 text-cyan-900 px-4 py-2 rounded shadow-md transition-all duration-300"
+          className="fixed top-12 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-amber-200 via-emerald-200 to-sky-200 bg-opacity-100 border border-lime-400 text-black px-4 py-2 rounded shadow-md z-50 transition-all duration-300"
           role="alert"
         >
           Code Copied!
