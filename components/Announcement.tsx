@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaTimes } from "react-icons/fa";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 import { IoCopyOutline } from "react-icons/io5";
 
 interface AnnouncementProps {
@@ -29,15 +29,15 @@ const Announcement: React.FC<AnnouncementProps> = ({ onClose }) => {
           ✨First Wash Free*✨{" "}
           <strong className="ml-1 flex items-center space-x-1">
             Use code:{" "}
-            <span className="bg-red-200 px-1 py-0.5 rounded text-xs text-red-900 ml-3">
+            <span className="bg-red-200 px-1 py-0.5 rounded text-xs text-red-900 ml-2">
               LAUNDRY115
             </span>
             <button
               onClick={handleCopyCode}
-              className="bg-gray-100 px-2 py-1 rounded text-gray-800 hover:bg-gray-300 transition-all text-sm"
+              className="bg-gray-100 px-0.5 py-0.5 rounded text-gray-800 hover:bg-gray-300 transition-all text-sm"
               aria-label="Copy discount code"
             >
-              <IoCopyOutline py-1 />
+              <IoCopyOutline />
             </button>
           </strong>
         </span>
@@ -49,7 +49,7 @@ const Announcement: React.FC<AnnouncementProps> = ({ onClose }) => {
         className="text-red-600 hover:text-red-800 transition ml-auto"
         aria-label="Close announcement"
       >
-        <FaTimes size={20} />
+        <IoIosCloseCircleOutline size={20} />
       </button>
       {/* Disappearing Box for Copied Message */}
       {isCopied && (

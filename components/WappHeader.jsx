@@ -29,7 +29,7 @@ const WappHeader = ({ isAnnouncementVisible }) => {
 
   return (
     <header
-      className={`sticky top-0 z-40 flex items-center justify-between bg-emerald-50 bg-opacity-10 p-4 text-black shadow-lg ${
+      className={`sticky top-0 z-40 flex items-center justify-between bg-gradient-to-br from-amber-100 via-emerald-100 to-sky-200 bg-opacity-100 p-4 text-black shadow-lg ${
         isAnnouncementVisible ? "mt-0" : ""
       }`}
     >
@@ -57,13 +57,13 @@ const WappHeader = ({ isAnnouncementVisible }) => {
       {/* Sidebar for Mobile */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-cyan-100 flex flex-col items-center justify-center p-4 z-50"
+          className="fixed inset-0 bg-gradient-to-br from-purple-200 via-cyan-200 to-emerald-100 flex flex-col items-center justify-center p-4 z-50"
           onClick={toggleMenu} // Close the menu when clicking anywhere on the overlay
         >
           {/* Close Icon */}
           <button
             onClick={toggleMenu}
-            className="absolute top-4 right-4 text-3xl text-black hover:text-red-500 transition-all"
+            className="absolute top-4 right-4 text-3xl text-amber-400 hover:text-red-500 transition-all"
             aria-label="Close menu"
           >
             <IoIosCloseCircleOutline />
