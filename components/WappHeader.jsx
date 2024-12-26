@@ -57,7 +57,7 @@ const WappHeader = ({ isAnnouncementVisible }) => {
       {/* Sidebar for Mobile */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-cyan-50 flex flex-col items-center justify-center p-4 z-50"
+          className="fixed inset-0 bg-cyan-100 flex flex-col items-center justify-center p-4 z-50"
           onClick={toggleMenu} // Close the menu when clicking anywhere on the overlay
         >
           <ul className="space-y-8 text-black text-2xl">
@@ -65,7 +65,7 @@ const WappHeader = ({ isAnnouncementVisible }) => {
               <li key={index}>
                 <a
                   href={item.href}
-                  className="flex flex-col items-center justify-center space-y-2 p-4 bg-emerald-50 hover:bg-amber-500 transition-all"
+                  className="flex flex-col items-center justify-center rounded-full space-y-2 p-4 bg-emerald-200 hover:bg-amber-500 transition-all"
                 >
                   <div className="text-3xl ">{item.icon}</div>
                   <span className="text-teal-700">{item.label}</span>

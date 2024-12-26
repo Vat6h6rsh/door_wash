@@ -1,20 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 export function HeroAurora() {
-  const [offsetY, setOffsetY] = useState(0);
-
-  const handleScroll = () => {
-    setOffsetY(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <section
       className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center py-24"
