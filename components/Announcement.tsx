@@ -29,7 +29,7 @@ const Announcement: React.FC<AnnouncementProps> = ({ onClose }) => {
           ✨First Wash Free*✨{" "}
           <strong className="ml-1 flex items-center space-x-1">
             Use code:{" "}
-            <span className="bg-red-200 px-0.5 py-0.5 rounded text-sm text-red-900">
+            <span className="bg-red-200 px-1 py-0.5 rounded text-xs text-red-900 ml-3">
               LAUNDRY115
             </span>
             <button
@@ -37,7 +37,7 @@ const Announcement: React.FC<AnnouncementProps> = ({ onClose }) => {
               className="bg-gray-100 px-2 py-1 rounded text-gray-800 hover:bg-gray-300 transition-all text-sm"
               aria-label="Copy discount code"
             >
-              <IoCopyOutline size={8} />
+              <IoCopyOutline py-1 />
             </button>
           </strong>
         </span>
@@ -54,7 +54,7 @@ const Announcement: React.FC<AnnouncementProps> = ({ onClose }) => {
       {/* Disappearing Box for Copied Message */}
       {isCopied && (
         <div
-          className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-black border border-lime-400 text-white px-4 py-2 rounded shadow-md transition-all duration-300"
+          className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-black border bg-opacity-100 border-lime-400 text-cyan-900 px-4 py-2 rounded shadow-md transition-all duration-300"
           role="alert"
         >
           Code Copied!

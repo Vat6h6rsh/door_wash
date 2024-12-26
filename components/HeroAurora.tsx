@@ -5,10 +5,11 @@ import Image from "next/image";
 export function HeroAurora() {
   return (
     <section
-      className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center py-24"
+      className="relative flex flex-col items-center justify-center h-screen bg-fixed bg-cover bg-center py-24"
       style={{
         backgroundImage: `url("/tommaso-pecchioli-wQg7K-Aod50-unsplash.jpg")`,
         fontFamily: "'San Francisco', sans-serif",
+        backgroundPosition: "center 60%", // Adjust focal point of the image
       }}
     >
       <div className="absolute inset-0"></div>{" "}

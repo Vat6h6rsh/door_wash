@@ -15,7 +15,7 @@ const WappHeader = ({ isAnnouncementVisible }) => {
   const menuItems = [
     {
       icon: <GiClothesline className="" />,
-      label: "Why ?",
+      label: "Why Doorwash?",
       href: "#elp",
     },
     {
@@ -29,7 +29,7 @@ const WappHeader = ({ isAnnouncementVisible }) => {
 
   return (
     <header
-      className={`sticky top-0 z-40 flex items-center justify-between bg-emerald-50 bg-opacity-95 p-4 text-black shadow-lg ${
+      className={`sticky top-0 z-40 flex items-center justify-between bg-emerald-50 bg-opacity-10 p-4 text-black shadow-lg ${
         isAnnouncementVisible ? "mt-0" : ""
       }`}
     >
@@ -60,6 +60,15 @@ const WappHeader = ({ isAnnouncementVisible }) => {
           className="fixed inset-0 bg-cyan-100 flex flex-col items-center justify-center p-4 z-50"
           onClick={toggleMenu} // Close the menu when clicking anywhere on the overlay
         >
+          {/* Close Icon */}
+          <button
+            onClick={toggleMenu}
+            className="absolute top-4 right-4 text-3xl text-black hover:text-red-500 transition-all"
+            aria-label="Close menu"
+          >
+            <IoIosCloseCircleOutline />
+          </button>
+
           <ul className="space-y-8 text-black text-2xl">
             {menuItems.map((item, index) => (
               <li key={index}>
